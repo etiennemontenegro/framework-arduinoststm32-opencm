@@ -1,0 +1,16 @@
+{
+    "name": "framework-arduinoststm32-opencm",
+    "version": "1.5.1",
+    "description": "Arduino Wiring-based Framework for OpenCM 9.4 boards",
+    "keywords": [
+      "framework",
+      "arduino",
+      "stmicroelectronics",
+      "stm32",
+      "opencm"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/farisrfp/framework-arduinoststm32-opencm"
+    }
+  }
