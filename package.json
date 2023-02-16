@@ -11,6 +11,6 @@
     ],
     "repository": {
       "type": "git",
-      "url": "https://github.com/farisrfp/framework-arduinoststm32-opencm"
+      "url": "https://github.com/etiennemontenegro/framework-arduinoststm32-opencm.git"
     }
   }

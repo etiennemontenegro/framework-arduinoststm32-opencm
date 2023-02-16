@@ -31,7 +31,7 @@ env = DefaultEnvironment()
 platform = env.PioPlatform()
 board_config = env.BoardConfig()
 
-FRAMEWORK_DIR = platform.get_package_dir("framework-arduinoststm32-opencr")
+FRAMEWORK_DIR = platform.get_package_dir("framework-arduinoststm32-opencm")
 CMSIS_DIR = join(platform.get_package_dir("framework-cmsis"), "CMSIS")
 assert isdir(FRAMEWORK_DIR)
 assert isdir(CMSIS_DIR)
@@ -156,7 +156,7 @@ def configure_application_offset(mcu, upload_protocol):
 
 
 if (
-    any(cpu in board_config.get("build.cpu") for cpu in ("cortex-m4", "cortex-m7"))
+    any(cpu in board_config.get("build.cpu") for cpu in ("cortex-m3", "cortex-m3"))
     and "stm32wl" not in mcu
 ):
     env.Append(
@@ -325,11 +325,11 @@ env.Append(
         join(CMSIS_DIR, "DSP", "Include"),
         join(CMSIS_DIR, "DSP", "PrivateInclude"),
         join(FRAMEWORK_DIR, "cores", "arduino"),
-        join(FRAMEWORK_DIR, "variants", "OpenCR", "hw"),
-        join(FRAMEWORK_DIR, "variants", "OpenCR", "hw", "usb_cdc"),
-        join(FRAMEWORK_DIR, "variants", "OpenCR", "hw", "driver"),
-        join(FRAMEWORK_DIR, "variants", "OpenCR", "bsp", "opencr"),
-        join(FRAMEWORK_DIR, "variants", "OpenCR", "lib", "STM32F7xx_HAL_Driver", "Inc"),
+        join(FRAMEWORK_DIR, "variants", "OpenCM", "hw"),
+        join(FRAMEWORK_DIR, "variants", "OpenCM", "hw", "usb_cdc"),
+        join(FRAMEWORK_DIR, "variants", "OpenCM", "hw", "driver"),
+        join(FRAMEWORK_DIR, "variants", "OpenCM", "bsp", "opencm"),
+        join(FRAMEWORK_DIR, "variants", "OpenCM", "lib", "STM32F7xx_HAL_Driver", "Inc"),
     ],
     LINKFLAGS=[
         "-Os",
